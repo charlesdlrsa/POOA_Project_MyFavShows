@@ -1,0 +1,4 @@
+include myfavshows/schema.sql
+graft myfavshows/static
+graft myfavshows/templates
+global-exclude *.pyc

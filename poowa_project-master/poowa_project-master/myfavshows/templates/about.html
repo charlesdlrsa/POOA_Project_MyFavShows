@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+
+{% block navbar %}
+<ul>
+    <li><a href="{{ url_for('search.search')}}">Search Show</a></li>
+    <li><a href="{{ url_for('search.get_trending')}}">Trending</a></li>
+    <li><a href="{{ url_for('search.get_popular')}}">Popular</a></li>
+    <li><a href="{{ url_for('search.get_top_rated')}}">Top rated</a></li>
+    <li style="float:right;"><a href="{{ url_for('myfav.get_my_fav')}}">My Favourites</a></li>
+    <li style="float:right;"><a class="active" href="{{ url_for('about')}}">About</a></li>
+</ul>
+{% endblock %}
+
+
+{% block header %}
+<h1>{% block title %}About MyFavShows{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<p>This app was created by Paul, Charles and Adrien with love and is powered by The Movie DataBase.</p>
+
+<img src="{{ url_for('static', filename='tmdb.png')}}" alt="No poster available">
+
+{% endblock %}

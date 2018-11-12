@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block script %}
+<script type="text/javascript">
+    document.onkeydown = function(e) {
+    switch (e.keyCode) {
+        case 37:
+            if ( {{ current_page }} > 1) {
+                window.location.replace("{{ url_for('search.get_results', query=query, page=current_page-1) }}");
+            };
+            break;
+        case 39:
+            if ( {{ current_page }} < {{ total_pages }}) {
+                window.location.replace("{{ url_for('search.get_results', query=query, page=current_page+1) }}");
+            };
+            break;
+    }
+};
+</script>
+{% endblock %}
+
+
+{% block navbar %}
+<ul>
+    <li><a class="active" href="{{ url_for('search.search')}}">Search Show</a></li>
+    <li><a href="{{ url_for('search.get_trending')}}">Trending</a></li>
+    <li><a href="{{ url_for('search.get_popular')}}">Popular</a></li>
+    <li><a href="{{ url_for('search.get_top_rated')}}">Top rated</a></li>
+    <li style="float:right;"><a href="{{ url_for('myfav.get_my_fav')}}">My Favourites</a></li>
+    <li style="float:right;"><a href="{{ url_for('about')}}">About</a></li>
+</ul>
+{% endblock %}
+
+
+{% block header %}
+<h1>{% block title %}Search results for "{{ query }}"{% endblock %}</h1>
+{{ super() }}
+{% endblock %}
+
+{% block pagination %}
+{% if total_pages %}
+<div class="pagination">
+    {% if current_page > 1 %}
+    <a href="{{ url_for('search.get_results', query=query, page=current_page-1) }}">❮</a>
+    {% endif %}
+    <a>{{ current_page }}</a>
+    {% if current_page < total_pages %}
+    <a href="{{ url_for('search.get_results', query=query, page=current_page+1) }}">❯</a>
+    {% endif %}
+</div>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+
+    <form class="searchbar" method="post">
+    <input type="text" placeholder="Type here to do a new search" name="title" id="title" required>
+    <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+
+{% endblock %}
