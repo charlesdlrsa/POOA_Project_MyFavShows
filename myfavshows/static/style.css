@@ -1,0 +1,208 @@
+html { font-family: 'Open Sans', sans-serif; font-weight: 300; background: #ffffff; padding: 1rem; }
+body { max-width: 960px; margin: 0 auto; background: white; }
+h1 { font-family: 'Open Sans', sans-serif; font-weight: 200; font-size: x-large; color: #2d8a9c; margin: 1rem 0; }
+a { color: #2d8a9c; text-decoration:none }
+hr { border: none;margin-bottom: 15px; }
+nav { background: #ffffff; display: flex; align-items: center; padding: 0 0.5rem; margin-bottom: 10px;}
+nav h1 { flex: auto; margin: 0; }
+nav h1 a { text-decoration: none; padding: 0.25rem 0.5rem;font-size: xx-large; }
+nav ul  { display: flex; list-style: none; margin: 0; padding: 0; }
+nav ul li a, nav ul li span { display: block; padding: 0.5rem; }
+.content { padding: 0 1rem 1rem; }
+.content > header { display: flex; align-items: flex-end; }
+.content > header h1 { flex: auto; margin: 1rem 0 0.25rem 0; }
+.content > header > div  { float: right; color: #2d8a9c ; font-size: 11px; margin-bottom: 10px; }
+.flash { margin: 1em 0; padding: 1em; background: #cae6f6; border: 1px solid #377ba8; }
+.result > header { display: flex; align-items: flex-end; font-size: 0.85em; }
+.result > header > div:first-of-type { flex: auto; }
+.result > header h1 { font-size: 1.5em; margin-bottom: 0; }
+.result .about { color: #769cb5;}
+.result .body { white-space: pre-line; color: #333c4e; line-height: 20px;}
+header .action { display: block; float: right; margin-bottom: 0.3rem;margin-left: 0.20rem;}
+.hearticon { display: block; float: right; margin-bottom: 0.3rem;margin-left: 0.20rem;font-size:30px; }
+.content:last-child { margin-bottom: 0; }
+.content form { margin: 1em 0; }
+.content label { font-weight: bold; margin-bottom: 0.5em; }
+.content input, .content textarea { margin-bottom: 1em; }
+.content textarea { min-height: 12em; resize: vertical; }
+input.danger { color: #cc2f2e; }
+input[type=submit] { align-self: start; min-width: 10em; }
+.notification { float:right; font-size: 12px; font-style: italic; color: white; background-color: #c43d3d; padding: 0px 5px 0px 5px; margin-right: 30px; border-radius: 5px; }
+
+
+/* Pagination
+==========================*/
+.pagination {
+    display: inline-block;
+}
+
+.pagination a {
+    color: black;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
+
+
+/* Navigation bar
+==========================*/
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #f1f1f1;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-weight: 200;
+}
+
+li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+li a.active {
+    color: white;
+    background-color: #25b7d3;
+}
+
+
+/* Login/register menu
+==========================*/
+/* Add padding to containers */
+.auth_container {
+  padding: 16px;
+}
+
+/* Full-width input fields */
+.auth_container > input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/register button */
+.registerbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+  font-size: 15px;
+}
+
+.registerbtn:hover {
+  opacity:1;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+}
+
+
+/* SEARCH BAR
+==========================*/
+* {
+  box-sizing: border-box;
+}
+
+/* Style the search field */
+form.searchbar input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  font-weight: lighter;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+  margin-bottom: 0em;
+}
+
+/* Style the submit button */
+form.searchbar button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #25b7d3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none; /* Prevent double borders */
+  cursor: pointer;
+}
+
+form.searchbar button:hover {
+  background: #0b7dda;
+}
+
+/* Clear floats */
+form.searchbar::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+/* Setting the Containers for the Shows' listings
+==========================*/
+.flex-container {
+  display: flex;
+  align-items: stretch;
+  background-color: #f1f1f1;
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.flex-container > div {
+  color: white;
+  width: 100px;
+  margin: 8px;
+  line-height: 30px;
+  height:234px;
+}
+
+.flex-container > div:first-child { margin: 0px;}
+
+.poster {
+  margin: 0px;
+}
+
+/* Gradient color for the ratings star
+==========================*/
+.gradient-icon {
+    background: -webkit-gradient(linear, left top, left bottom, from(#ffeecc), to(#ffc34d));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;
+}
