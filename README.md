@@ -89,7 +89,7 @@ We thought that it was useful to implement multithreading when the user loads hi
 Therefore we made sure that each of this request will be launched by a single thread, and at the same time than the others (cf class APIrequest(Thread) in classes.py and function make_multi_requests in backend.py).
 Your are welcomed to add a few TV shows to your favourites and note how quick the favourites page loads.
 
-#### Originality
+#### Our originality
 We made sure that the graphical interface could be as intuitive and beautiful as it could be.
 We added a few custom features to the application to improve user experience such as:
 
