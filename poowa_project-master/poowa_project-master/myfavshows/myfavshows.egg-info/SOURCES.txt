@@ -1,7 +1,0 @@
-MANIFEST.in
-myfavshows.egg-info/PKG-INFO
-myfavshows.egg-info/SOURCES.txt
-myfavshows.egg-info/dependency_links.txt
-myfavshows.egg-info/not-zip-safe
-myfavshows.egg-info/requires.txt
-myfavshows.egg-info/top_level.txt
