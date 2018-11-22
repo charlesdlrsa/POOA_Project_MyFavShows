@@ -43,7 +43,7 @@ def create():
             db.commit()
             return redirect(url_for('blog.index'))
 
-    return render_template('blog/create.html', show=[])
+    return render_template('blog/create.html')
 
 
 def get_post(id, check_author=True):
@@ -88,7 +88,7 @@ def update(id):
             db.commit()
             return redirect(url_for('blog.index'))
 
-    return render_template('blog/update.html', show=[], post=post)
+    return render_template('blog/update.html', post=post)
 
 
 @bp.route('/blog/<int:id>/delete', methods=('POST',))
