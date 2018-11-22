@@ -2,8 +2,8 @@ from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for, session
 )
 
-from backend import *
-from classes import *
+from myfavshows.backend import *
+from myfavshows.classes import *
 
 bp = Blueprint('search', __name__)
 

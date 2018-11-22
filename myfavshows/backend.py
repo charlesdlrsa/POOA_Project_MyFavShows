@@ -3,8 +3,8 @@ from flask import (
 )
 
 import requests, werkzeug
-from db import get_db
-from classes import *
+from myfavshows.db import get_db
+from myfavshows.classes import *
 
 # Parameters that are used several times in the code below
 api_path = 'https://api.themoviedb.org/3/'

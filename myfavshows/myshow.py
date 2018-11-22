@@ -1,8 +1,8 @@
 from flask import (
     Blueprint, render_template, session
 )
-from backend import *
-from classes import *
+from myfavshows.backend import *
+from myfavshows.classes import *
 
 bp = Blueprint('myshow', __name__)
 

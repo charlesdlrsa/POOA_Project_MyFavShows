@@ -2,10 +2,10 @@ from flask import (
     Blueprint, flash, g, redirect, render_template, request, url_for,session
 )
 
-from auth import login_required
-from db import get_db
-from backend import *
-from classes import *
+from myfavshows.auth import login_required
+from myfavshows.db import get_db
+from myfavshows.backend import *
+from myfavshows.classes import *
 
 import requests
 

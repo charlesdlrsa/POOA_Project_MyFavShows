@@ -58,7 +58,6 @@ def create_app(test_config=None):
 
     return app
 
-
 """
 set FLASK_APP=myfavshows
 set FLASK_ENV=development
