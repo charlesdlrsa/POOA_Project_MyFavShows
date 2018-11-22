@@ -28,6 +28,9 @@ header .action { display: block; float: right; margin-bottom: 0.3rem;margin-left
 input.danger { color: #cc2f2e; }
 input[type=submit] { align-self: start; min-width: 10em; }
 .notification { float:right; font-size: 12px; font-style: italic; color: white; background-color: #c43d3d; padding: 0px 5px 0px 5px; margin-right: 30px; border-radius: 5px; }
+.edit { display: block; float: right; margin-top: 0.4rem;margin-right: 0.30rem;font-size:30px; }
+.newpost { display: block; float: right; margin-top: 0.3rem;margin-left: 0.20rem;font-size:30px; }
+
 
 
 /* Pagination
